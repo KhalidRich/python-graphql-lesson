@@ -16,6 +16,10 @@ app.add_url_rule(
     )
 )
 
+@app.route('/')
+def index():
+    return "You should go to localhost:5000/graphql for the goods"
+
 @app.teardown_appcontext
 def shutdown_session(exception=None):
     db_session.remove()
