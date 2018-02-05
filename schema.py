@@ -16,5 +16,6 @@ class Employee(SQLAlchemyObjectType):
 class Query(graphene.ObjectType):
     node = relay.Node.Field()
     all_employees = SQLAlchemyConnectionField(Employee)
+    all_departments = SQLAlchemyConnectionField(Department)
 
 schema = graphene.Schema(query=Query)
