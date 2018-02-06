@@ -187,3 +187,11 @@ An example request might look like:
 
 # Running the Sample GraphQL Demo
 You'll notice in this repository some set up to create a docker container (and a `requirements.txt` file if you prefer virtualenv). Run the following commands and head over to `localhost:8080/graphql` to play around with the interactive environment. Note that there is no data included by default, so you'll need to add data on your own. 
+
+To create the container, run the following:
+```
+docker-compose build graphql
+docker-compose up -d
+```
+To check the container, run: `docker-compose ps`
+To stop the container run: `docker-compose stop`
