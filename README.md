@@ -184,3 +184,6 @@ So how do we _actually_ use GraphQL in a production environment? To start, the s
 
 An example request might look like: 
 `http://cms.thrillist.com/graphql?query={node(nid: 4052115){title}}` via HTTP GET. 
+
+# Running the Sample GraphQL Demo
+You'll notice in this repository some set up to create a docker container (and a `requirements.txt` file if you prefer virtualenv). Run the following commands and head over to `localhost:8080/graphql` to play around with the interactive environment. Note that there is no data included by default, so you'll need to add data on your own. 
