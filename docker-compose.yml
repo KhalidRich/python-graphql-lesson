@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  graphql:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: graphql:1
+    restart: "no"
+    ports:
+     - "8080:80"
+    volumes:
+      - "/Users/username/docker/graphql/data:/root/data"

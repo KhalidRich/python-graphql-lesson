@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-COPY . /root/
+COPY . /root
 
 RUN apk add --update \
     python \
@@ -9,8 +9,8 @@ RUN apk add --update \
   && pip install --requirement /root/requirements.txt \
   && rm -rf /var/cache/apk/*
 
-WORKDIR /root/
+WORKDIR /root
 
-EXPOSE 5000
+EXPOSE 80
 
 CMD ["/usr/bin/python", "app.py"]
